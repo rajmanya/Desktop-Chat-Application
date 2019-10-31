@@ -1,0 +1,131 @@
+$background_color_1: #ddd;
+$background_color_2: #f2f2f2;
+$background_color_3: #FFFFDD;
+$background_color_5: white;
+$background_color_4: #ff1a1a;
+$color_1: black;
+
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgb(220, 220, 220);
+  border-style: groove;
+  border-radius: 10px;
+}
+
+#contactPanel {
+  width: 28%;
+  margin-top: 1px;
+  height: 530px;
+  background-color: $background_color_5;
+  position: absolute;
+  overflow: scroll;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding-bottom: 11px;
+    padding-top: 1px;
+    height: 70px;
+    border-bottom: 1px dashed lightgrey;
+    -moz-box-shadow: 3px 4px 3px #ccc;
+    -webkit-box-shadow: 3px 4px 3px #ccc;
+    box-shadow: 3px 4px 3px #ccc;
+
+    &:hover {
+      background-color: $background_color_2;
+      -webkit-animation-delay: 1s;
+      animation-delay: 1s;
+    }
+  }
+}
+
+.contactList {
+  cursor: pointer;
+  position: relative;
+  padding: 5px 5px 12px;
+  list-style-type: none;
+  font-size: 18px;
+  transition: 0.2s;
+  display: inline block;
+
+}
+
+.contact {
+  padding: 5px;
+  margin-top: 8px;
+}
+
+.unreadMessage {
+  float: right;
+  align-content: center;
+  background-color: $background_color_4;
+  margin-top: 10px;
+  //margin-top: 20px;
+  margin-right: 5px;
+  color: $background_color_1;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  text-align: center;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+
+}
+
+.unreadMessageZero {
+  float: right;
+  align-content: center;
+  //background-color: red;
+ // margin-top: 20px;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  text-align: center;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+
+.contactPhoneNumber {
+  margin-left: 65px;
+  padding-top: 0px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding-bottom: 0px;
+  width: 130px;
+  height: 20px;
+  display:none;
+}
+.contactName {
+  margin-left: 35px;
+  padding-top: 0px;
+  margin-top: 2px;
+  padding-bottom: 0px;
+  //margin-bottom: 20px;
+  width: 130px;
+  height: 20px;
+  //display: inline block;
+}
+
+li:hover .contactPhoneNumber{
+  display: block;
+}
+
+.profileImage {
+  margin-top: 3px;
+  float: left;
+  width: 30px;
+  height: 30px;
+}
+

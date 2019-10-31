@@ -1,0 +1,104 @@
+$color_1: black;
+$background_color_1: #ddd;
+$background_color_2: #4E91D0;
+$background_color_3: #fefefe;
+
+.createContactPanel {
+  float: left;
+  height: 545px;
+  width: 28%;
+  background-size: contain;
+  margin-top: -8px;
+  margin-bottom: -4px;
+  margin-right: -7px;
+  margin-left: -8px;
+}
+/*.blackOverlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30% !important;
+  height: 100%;
+  background-color: #F7F7F7;
+  opacity: .17;
+  z-index: 11;
+  background: url("//img.carwale.com/cw-common/slide/overlay.png") repeat scroll 0 0 transparent;
+}*/
+input[type=text] {
+	width: 150px;
+	padding: 5px;
+	margin: 1px 0 2px 0;
+	border: none;
+	background: #f1f1f1;
+}
+input {
+	&:focus {
+		background-color: $background_color_1;
+		outline: none;
+	}
+}
+button {
+	background-color: $background_color_2;
+  background-image: linear-gradient(#4E91D0,#b3ffff );
+  color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 150px;
+	opacity: 0.9;
+	&:hover {
+		opacity: 1;
+	}
+}
+.addButton {
+	width: 100%;
+	color: $color_1;
+  background-color: $background_color_2;
+  font-weight: bolder;
+	&:hover {
+		cursor: pointer;
+	}
+}
+.form {
+  background-color: black;
+  margin-right: 1px;
+  margin-top: 8px;
+  margin-left: 8px;
+  padding: 36px;
+  padding-left: 46px;
+  color: white;
+}
+* {
+	box-sizing: border-box;
+}
+.inputs {
+	padding-left: 35px;
+}
+.addContact {
+	padding: 35px;
+}
+.header {
+  padding-left: 30px;
+  padding-right: 5px;
+}
+.addContactImage{
+  height: 140px;
+  width: 140px;
+  margin-left: 48px;
+  padding: 5px;
+  border: solid 1px #EFEFEF;
+}
+
+*:hover img.addContactImage {
+  border: solid 1px #CCC;
+  -moz-box-shadow: 1px 1px 5px #999;
+  -webkit-box-shadow: 1px 1px 5px #999;
+      box-shadow: 1px 1px 5px #999;
+}
+.backgroundImage{
+  height: 185px;
+  width: 340px;
+  margin-left: 8px;
+}
+

@@ -1,0 +1,26 @@
+<div class="mainDiv">
+  <div id="wrapper">
+  <div class="chatWindow">
+  <ng-container *ngFor="let chat of chats">
+    <!--Using *ngIf to check the type of message(received or sent)-->
+    <div *ngIf="chat.type == 'sent'">
+      <div class="clear"></div>
+      <div class="sentDiv">
+        <span>{{chat.message}}</span><br />
+      </div>
+    </div>
+    <div *ngIf="chat.type == 'received'">
+      <div class="clear"></div>
+      <div class="receivedDiv">
+        <span>{{chat.message}}</span><br />
+      </div>
+    </div>
+  </ng-container>
+</div>
+</div>
+  <div class="textBox">
+    <input type="text" name="message"  placeholder="Type your message..."  [(ngModel)]="txtMessage"  size="80">
+    <!--<button type="button" class="sendButton" (click)="sendMessage()"></button>-->
+    <a class="sendButton" (click)="sendMessage()"><img class="sendIcon" src="/assets/images/icon-send-2.png"></a>
+  </div>
+</div>

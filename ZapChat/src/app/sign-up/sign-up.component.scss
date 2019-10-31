@@ -1,0 +1,242 @@
+$color_1: white;
+$color_2: #f1f1f1;
+$color_3: #f44336;
+$color_4: #fff;
+$color-primary:#2196F3;
+$font_family_1: Arial,
+Helvetica,
+sans-serif;
+$background_color_1: #ddd;
+$background_color_3: #f44336;
+$background_color_4: #474e5d;
+$background_color_5: #fefefe;
+$background_color_6: black;
+h1 {
+  font-family: $font_family_1;
+  //	font: 6em "Comic Sans MS";
+  color: white;
+}
+p{
+  color: white;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+.inputGroup{
+  position:relative;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.blackOverlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100%;
+  background-color: #F7F7F7;
+  opacity: .17;
+  filter: Alpha(Opacity=30);
+  z-index: 11;
+  background: url("//img.carwale.com/cw-common/slide/overlay.png") repeat scroll 0 0 transparent;
+}
+.id01 {
+  background-image: url('/assets/images/zapchat5.png');
+  background-repeat: no-repeat;
+  height: 510px;
+  width: 1250px;
+  margin-bottom: -4px;
+  margin-right: -2px;
+  margin-left: -8px;
+}
+
+input[type=text] {
+  width: 250px;
+  padding: 15px;
+  margin: 15px auto;
+  display: inline-block;
+  border: none;
+  z-index: 1;
+  border-bottom:1px solid lighten(black, 85%);
+  background: transparent;
+  position: relative;
+  color: white;
+  & + label{
+    position:absolute;
+    top:10px;
+    left:3px;
+    font-size:16px;
+    color:lighten(black, 60%);
+    transition: all .2s ease-out;
+  }
+  &:focus {
+    outline: none;
+    border-width:2px;
+    border-color:$color-primary;
+    transition: all .2s ease-out;
+  }
+  &:focus + label,
+  &.has-value + label
+  {
+    top:-15px;
+    color:$color-primary;
+    font-size:12px;
+  }
+}
+
+input[type=password] {
+  width: 250px;
+  padding: 15px;
+  margin: 15px auto;
+  display: inline-block;
+  border: none;
+  z-index: 1;
+  color: white;
+  border-bottom:1px solid lighten(black, 85%);
+  background: transparent;
+  position: relative;
+  & + label{
+    position:absolute;
+    top:10px;
+    left:3px;
+    font-size:16px;
+    color:lighten(black, 60%);
+    transition: all .2s ease-out;
+  }
+  &:focus {
+    outline: none;
+    border-width:2px;
+    border-color:$color-primary;
+    transition: all .2s ease-out;
+  }
+  &:focus + label,
+  &.has-value + label
+  {
+    top:-15px;
+    color:$color-primary;
+    font-size:12px;
+  }
+}
+button {
+  color : black ;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 250px;
+  opacity: 0.9;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.cancelButton {
+  padding: 14px 20px;
+  background-image: linear-gradient(#ff1a1a , #ff8080 );
+  float: center;
+  width: 250px;
+}
+.cancel{
+  color: black;
+  text-decoration: none;
+  font-weight: bolder;
+
+  &:visited{
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+  }
+}
+.signUpButton {
+  float: center;
+  width: 250px;
+  background-image: linear-gradient(#4E91D0,#b3ffff );
+  font-weight: bolder;
+}
+.termsLink{
+color:#66b3ff;
+&:visited{
+  color: #f5f255;
+}
+}
+.container {
+  padding: 16px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: $background_color_4;
+  padding-top: 50px;
+}
+
+.modal-content {
+  background-color: $background_color_6;
+  margin: 3% auto 3% auto;
+  border: 1px solid rgb(248, 206, 206);
+  width: 49%;
+  margin-left: -65px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 53px;
+    left: 145px;
+  -moz-box-shadow: 5px 5px 9px #999;
+  -webkit-box-shadow: 15px 5px 9px #999;
+    box-shadow: 5px 10px 9px #999;
+    z-index: 100002;
+}
+
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: $color_2;
+
+  &:hover {
+    color: $color_3;
+    cursor: pointer;
+  }
+
+  &:focus {
+    color: $color_3;
+    cursor: pointer;
+  }
+}
+
+.toolTip {
+  position: relative;
+  display: inline-block;
+  margin-top: 18px;
+  .toolTipText {
+    visibility: hidden;
+    width: 120px;
+    background-color: $background_color_6;
+    color: $color_4;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+  }
+
+  &:hover {
+    .toolTipText {
+      visibility: visible;
+    }
+  }
+}
+
+.rightStuff{
+  margin-left: 100px;
+}

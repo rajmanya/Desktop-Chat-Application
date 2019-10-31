@@ -1,0 +1,31 @@
+<div class="loginPanel" id="loginPanel">
+  <div class="blackOverlay"></div>
+  <form name="loginForm" class="content">
+    <div class="header">
+      <h1>Log in</h1>
+      <!--Login Form-->
+      <div class="inputGroup">
+        <input type="text" name='phoneNumber' required maxlength="12" /><label>Phone Number</label>
+        <div class="toolTip"><img src="assets/images/i-button.png" height="25px" width="25px">
+        <span class="toolTipText">Phone Number length should not be more than 10 numbers</span>
+      </div></div>
+
+    <div class="inputGroup">
+      <input name='password' [type]="active ? 'text' : 'password'" /><label>Password</label>
+      <div class="showPassword" [ngClass]="active ? 'showPassword' : 'hidePassword'" (click)='passwordControl()'></div>
+      <div class="toolTip"><img src="assets/images/i-button.png" height="25x" width="25px">
+      <span class="toolTipText">Please enter Your Password</span>
+    </div>
+  </div>
+  </div>
+<div class="login">
+  <button type="button" class='loginButton' id='loginbtn' (click)="onClickLogin()">Log in</button>
+</div>
+<div>
+  <!--Routing to Sign Up page-->
+  <p>New user?<a class="singUpLink"routerLink="/signUp">Sign Up</a></p>
+ <!-- <p><a routerLink="/notification">Notify me</a></p>-->
+</div>
+</form>
+
+</div>

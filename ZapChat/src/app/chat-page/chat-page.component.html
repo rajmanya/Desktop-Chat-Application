@@ -1,0 +1,20 @@
+<div class="navigationBar">
+  <img src="/assets/images/Profile-Picture.png" height="35px" width="35px" class="Profile">
+  <a class="username">{{userName}}</a>
+  <a class="contacts active" (click)="setContactList(true)"><img class="contactBookImage" src="/assets/images/contact-book.png"></a>
+  <a class="addContacts" (click)="setAddContacts(true)"><img class="addContactImage" src="/assets/images/add-icon.png"></a>
+  <a href="" class="settings"><img class="settingsImage" src="/assets/images/logout.png"></a>
+  <a class="activeChat"> {{contactName}}</a>
+</div>
+<!--Adding the different components on the main chat page-->
+<div class="parentDiv">
+  <div [hidden]=!isContactListVisible class="contactListDiv">
+    <app-contact-list (childEvent)="messageNumber=$event" (contactName)="contactName=$event" [mobileNo]='mobileNo' ></app-contact-list>
+  </div>
+  <div [hidden]=isContactListVisible  class="addContactDiv">
+    <app-add-contacts (hideAddContactEvent)="isContactListVisible=$event" [mobileNo]='mobileNo' ></app-add-contacts>
+  </div>
+  <div class="chatWindowDiv">
+    <app-chat-window [messageNumber]='messageNumber' [mobileNo]='mobileNo'></app-chat-window>
+  </div>
+</div>

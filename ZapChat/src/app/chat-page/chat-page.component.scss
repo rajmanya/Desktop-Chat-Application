@@ -1,0 +1,153 @@
+$color_1: #f2f2f2;
+$color_2: black;
+$color_3: white;
+$font_family_1: Arial,
+Helvetica,
+sans-serif;
+$background_color_1: #333;
+$background_color_2: #ddd;
+$background_color_3: #F5D244;
+
+body {
+  margin: 0;
+  font-family: $font_family_1;
+}
+
+.Profile {
+  float: left;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+span {
+  float: left;
+  padding-top: 13px;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: $color_3;
+}
+
+.navigationBar {
+  overflow: hidden;
+  background-color: $background_color_1;
+  height: 45px;
+
+  a {
+    float: left;
+    color: $color_1;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    padding-bottom: 7px;
+
+    &:hover {
+      background-color: $background_color_2;
+      color: $color_2;
+      height: 100%;
+    }
+  }
+
+  /*a.active {
+    background-color: $background_color_1;
+    color: $color_2;
+    height: 30px;
+    width: 30px;
+    padding-left: 10px;
+    padding-top: 5px;
+  }*/
+
+  a.settings {
+    float: right;
+    height: 30px;
+    width: 30px;
+    padding-left: 10px;
+    padding-top: 5px;
+
+    &:hover {
+      background-color: $background_color_1;
+      transition-delay: 450ms;
+      transition: 300ms linear all;
+      -webkit-transform: rotateZ(-90deg);
+      -moz-transform: rotateZ(-90deg);
+      transform: rotateZ(-90deg);
+    }
+  }
+
+  a.addContacts {
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    padding-left: 15px;
+    padding-top: 5px;
+    &:hover {
+       background-color: $background_color_1;
+       transition-delay: 350ms;
+       transition: 800ms linear all;
+       -webkit-transform: rotateZ(360deg);
+       -moz-transform: rotateZ(360deg);
+       transform: rotateZ(360deg);
+     }
+
+  }
+
+  a.contacts {
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    padding-left: 15px;
+    padding-top: 5px;
+    &:hover {
+       background-color: $background_color_1;
+       transition-delay: 350ms;
+       transition: 600ms linear all;
+       -webkit-transform: rotateZ(360deg);
+       -moz-transform: rotateZ(360deg);
+       transform: rotateZ(360deg);
+     }
+    }
+    a.activeChat{
+      height: 45px;
+      padding-left: 210px;
+      margin-left: 132px;
+      border-left: #737373 groove;
+    }
+}
+.contactName {
+  margin-left: 35px;
+  padding-top: 0px;
+  margin-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 20px;
+  width: 130px;
+  height: 20px;
+  //display: inline block;
+}
+
+.contactList {
+  cursor: pointer;
+  position: relative;
+  padding: 8px 12px 40px;
+  list-style-type: none;
+  font-size: 18px;
+  transition: 0.2s;
+  display: inline block;
+}
+
+.contact {
+  padding: 5px;
+}
+.contactBookImage{
+  height: 35px;
+  width: 35px;
+}
+.addContactImage{
+  height: 35px;
+  width: 35px;
+}
+.settingsImage{
+  height: 35px;
+  width: 35px;
+}
+

@@ -1,0 +1,19 @@
+<div id="contactPanel">
+  <ul class="contactList">
+      <li *ngFor="let contact of contactList">
+          <div class="contact" (click)="showMessages(contact.phoneNumber,contact.name)">
+             <span class="profileImage"><img src="assets/images/Profile-image.png" height="40px" width="40px"></span>
+                <span id="contactNames"class="contactName">{{contact.name}}</span>
+                <ng-container *ngIf="contact.unreadMessages > '0'; then thenTemplate; else elseTemplate"></ng-container>
+                <ng-template #thenTemplate>
+                  <span class="unreadMessage">{{contact.unreadMessages}}</span>
+                </ng-template>
+                <ng-template #elseTemplate>
+                  <span class="unreadMessageZero"></span>
+                </ng-template>
+                <br>
+                <span id="contactNumber" class="contactPhoneNumber" >{{contact.phoneNumber}}</span>
+            </div>
+      </li>
+  </ul>
+</div>
